@@ -5,7 +5,7 @@
 }
 
 body {
-  font-size: 15px;
+  font-size: 1rem;
   font-family: 'Rubik', sans-serif;
   background: #ebeaea;
 }
@@ -68,8 +68,9 @@ ul {
   width: 100%;
   padding: 0.8rem;
   margin: 0.5rem 0;
-  border: 1px solid #fff;
+  border: 0.1rem solid #fff;
   border-radius: 0.5rem;
+  outline: none;
 }
 
 .form__category-title {
@@ -100,14 +101,50 @@ ul {
 }
 
 .form__check-category {
+  top: 0.8rem;
+  transform: translate(-50%, -50%);
   width: 1.5rem;
   height: 1.5rem;
-  cursor: pointer;
+  border-radius: 50%;
+  display: inline-block;
+  border: 0.2rem solid rgb(50, 118, 235);
+  position: relative;
+  left: 0.6rem;
+  box-shadow: 0 0 0.3rem 0 rgb(50, 118, 235);
 }
+
+/* .form__check-category::after {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: inline-block;
+  background: rgb(50, 118, 235);
+  left: 13px;
+  top: 25px;
+} */
 
 .personal {
   font-size: 1rem;
   font-weight: 300;
+}
+
+.form__check-category-personal {
+  border: 0.2rem solid rgb(240, 6, 6);
+  box-shadow: 0 0 0.3rem 0 rgb(233, 3, 3);
+}
+
+/* .form__check-category-personal::after {
+  background: rgb(241, 4, 4);
+} */
+
+.businessActive {
+  background: blue;
+}
+
+.personalActive {
+  background: red;
 }
 
 .form__category-btn {
@@ -155,36 +192,29 @@ ul {
   width: 100%;
   border: 0.5rem solid #fff;
   border-radius: 0.5rem;
+  outline: none;
 }
 
-.todo__edit-btn {
+.todo__btn {
   background: #eb1090;
   color: #fff;
   border: none;
-  padding: 5px 10px;
-  margin-left: 5px;
-  border-radius: 4px;
+  padding: 0.4rem 0.5rem;
+  margin-left: 0.5rem;
+  border-radius: 0.3rem;
   cursor: pointer;
   transition: 0.3s;
 }
 
-.todo__edit-btn:hover {
+.todo__btn:hover {
   background: #ac0365;
   transition: 0.3s;
 }
 
 .todo__delete-btn {
   background: #f44336;
-  color: #fff;
-  border: none;
-  padding: 5px 10px;
-  margin-left: 5px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: 0.3s;
 }
 
 .todo__delete-btn:hover {
   background: #ca1003;
-  transition: 0.3s;
 }

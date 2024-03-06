@@ -27,23 +27,17 @@
             <div class="form__checkbox">
               <div class="form__category">
                 <span class="business">Business</span>
-                <input
-                  class="form__check-category"
-                  type="radio"
-                  id="business "
-                  required
-                  name="category"
-                />
+                <div
+                  class="form__check-category form__check-category-business"
+                  id="business"
+                ></div>
               </div>
               <div class="form__category">
                 <span class="personal">Personal</span>
-                <input
-                  class="form__check-category"
-                  type="radio"
+                <div
+                  class="form__check-category form__check-category-personal"
                   id="personal"
-                  required
-                  name="category"
-                />
+                ></div>
               </div>
             </div>
             <button class="btn form__category-btn">Add todo</button>
@@ -54,8 +48,8 @@
               <div class="todo__card">
                 <input class="card__radio" type="radio" />
                 <input class="card__input" type="text" />
-                <button class="btn todo__edit-btn">Edit</button>
-                <button class="btn todo__delete-btn">Delete</button>
+                <button class="btn todo__btn todo__edit-btn">Edit</button>
+                <button class="btn todo__btn todo__delete-btn">Delete</button>
               </div>
             </li>
           </ul>
