@@ -46,6 +46,17 @@ ul {
   color: #313030;
 }
 
+.name {
+  font-size: 2rem;
+  line-height: 2rem;
+  font-weight: bold;
+  color: #313030;
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+
 .todo__create-form {
   display: flex;
   flex-direction: column;
@@ -111,9 +122,10 @@ ul {
   position: relative;
   left: 0.6rem;
   box-shadow: 0 0 0.3rem 0 rgb(50, 118, 235);
+  cursor: pointer;
 }
 
-/* .form__check-category::after {
+.form__check-category::after {
   position: absolute;
   transform: translate(-50%, -50%);
   width: 15px;
@@ -123,7 +135,7 @@ ul {
   background: rgb(50, 118, 235);
   left: 13px;
   top: 25px;
-} */
+}
 
 .personal {
   font-size: 1rem;
@@ -135,9 +147,9 @@ ul {
   box-shadow: 0 0 0.3rem 0 rgb(233, 3, 3);
 }
 
-/* .form__check-category-personal::after {
+.form__check-category-personal::after {
   background: rgb(241, 4, 4);
-} */
+}
 
 .businessActive {
   background: blue;
@@ -156,6 +168,7 @@ ul {
   border-radius: 0.5rem;
   border: none;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .form__category-btn:hover {
@@ -163,8 +176,8 @@ ul {
   transition: 0.3s;
 }
 
-.todo__list {
-  width: 100%;
+.todo-list .list {
+  margin: 1rem 0;
 }
 
 .todo__list-title {
@@ -174,47 +187,59 @@ ul {
   margin-bottom: 0.5rem;
 }
 
-.todo__list-item {
-  width: 100%;
-}
-
-.todo__card {
+.todo-list .todo-item {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 100%;
-  border: 0.5rem solid #fff;
-  border-radius: 1rem;
-  background: #fff;
-}
-
-.card__input {
-  width: 100%;
-  border: 0.5rem solid #fff;
+  background-color: #fff;
+  padding: 1rem;
   border-radius: 0.5rem;
-  outline: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
 }
 
-.todo__btn {
-  background: #eb1090;
-  color: #fff;
-  border: none;
-  padding: 0.4rem 0.5rem;
-  margin-left: 0.5rem;
-  border-radius: 0.3rem;
+.todo-item label {
+  display: block;
+  margin-right: 1rem;
   cursor: pointer;
-  transition: 0.3s;
 }
 
-.todo__btn:hover {
-  background: #ac0365;
-  transition: 0.3s;
+.todo-item .todo-content {
+  flex: 1 1 0%;
 }
 
-.todo__delete-btn {
-  background: #f44336;
+.todo-item .todo-content input {
+  color: #313154;
+  font-size: 1.125rem;
 }
 
-.todo__delete-btn:hover {
-  background: #ca1003;
+.todo-item .actions {
+  display: flex;
+  align-items: center;
+}
+
+.todo-item .actions button {
+  display: block;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.todo-item .actions button:hover {
+  opacity: 0.75;
+}
+
+.todo-item .actions .edit {
+  margin-right: 0.5rem;
+  background-color: #d80d94;
+}
+
+.todo-item .actions .delete {
+  background-color: #e41212;
+}
+
+.todo-item.done .todo-content input {
+  text-decoration: line-through;
+  color: var(--grey);
 }

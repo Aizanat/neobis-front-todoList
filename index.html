@@ -14,45 +14,43 @@
     <div class="todo">
       <div class="todo__container">
         <div class="todo__content">
-          <h1 class="todo__title">What's up,</h1>
+          <h1 class="todo__title">
+            What's up, <input class="name" type="text" placeholder="Aizanat" />
+          </h1>
           <form class="todo__create-form">
             <h2 class="form__title">CREATE A TODO</h2>
             <h3 class="form__question">What's on your todo list ?</h3>
             <input
               class="form__answer"
               type="text"
+              name="content"
               placeholder="e.g get a milk"
             />
             <div class="form__category-title">Pick a category</div>
             <div class="form__checkbox">
               <div class="form__category">
                 <span class="business">Business</span>
-                <div
+                <input
                   class="form__check-category form__check-category-business"
                   id="business"
-                ></div>
+                  name="category"
+                />
               </div>
               <div class="form__category">
                 <span class="personal">Personal</span>
-                <div
+                <input
                   class="form__check-category form__check-category-personal"
                   id="personal"
-                ></div>
+                  name="category"
+                />
               </div>
             </div>
             <button class="btn form__category-btn">Add todo</button>
           </form>
-          <ul class="todo__list">
-            <li class="todo__list-title">TODO LIST</li>
-            <li class="todo__list-item">
-              <div class="todo__card">
-                <input class="card__radio" type="radio" />
-                <input class="card__input" type="text" />
-                <button class="btn todo__btn todo__edit-btn">Edit</button>
-                <button class="btn todo__btn todo__delete-btn">Delete</button>
-              </div>
-            </li>
-          </ul>
+          <section class="todo-list">
+            <div class="todo__list-title">TODO LIST</div>
+            <div class="list" id="todo-list"></div>
+          </section>
         </div>
       </div>
     </div>
