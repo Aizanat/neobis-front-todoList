@@ -51,7 +51,7 @@ const onDomContentLoaded = () => {
 
       input.type = 'checkbox'
       input.checked = todo.done
-      span.classList.add('bubble')
+      span.classList.add('circle')
       if (todo.category == 'personal') {
         span.classList.add('personal')
       } else {
