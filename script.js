@@ -29,7 +29,6 @@ const onDomContentLoaded = () => {
 
       createTodos()
     })
-
     createTodos()
   })
 
