@@ -13,13 +13,19 @@ const onDomContentLoaded = () => {
     })
 
     newTodoForm.addEventListener('submit', (e) => {
+      const taskInput = document.querySelector('.form__answer').value
+
       e.preventDefault()
 
+      // const todo = {
+      //   content: e.target.elements.content.value,
+      //   category: e.target.elements.category.value,
+      //   done: false,
+      //   creatdAt: new Date().getTime(),
+      // }
+
       const todo = {
-        content: e.target.elements.content.value,
-        category: e.target.elements.category.value,
-        done: false,
-        creatdAt: new Date().getTime(),
+        content: taskInput,
       }
 
       todos.push(todo)

@@ -112,11 +112,14 @@ body {
   transform: translate(-50%, -50%);
   width: 1.5rem;
   height: 1.5rem;
+  display: inline-block;
+  border: 0.1rem solid rgb(50, 118, 235);
+  border-radius: 50%;
   position: relative;
   left: 0.6rem;
   cursor: pointer;
 }
-/* 
+
 .form__check-category::after {
   position: absolute;
   transform: translate(-50%, -50%);
@@ -127,7 +130,7 @@ body {
   background: rgb(50, 118, 235);
   left: 13px;
   top: 25px;
-} */
+}
 
 .personal {
   font-size: 1rem;
@@ -135,11 +138,12 @@ body {
 }
 
 .form__check-category-personal {
+  border: 0.1rem solid rgb(241, 4, 4);
 }
 
-/* .form__check-category-personal::after {
+.form__check-category-personal::after {
   background: rgb(241, 4, 4);
-} */
+}
 
 .businessActive {
   background: blue;
