@@ -26,6 +26,7 @@ const onDomContentLoaded = () => {
 
       const todo = {
         content: taskInput,
+        category: localStorage.getItem('category'),
       }
 
       todos.push(todo)
@@ -48,7 +49,7 @@ const onDomContentLoaded = () => {
 
       const label = document.createElement('label')
       const input = document.createElement('input')
-      const span = document.createElement('span')
+
       const content = document.createElement('div')
       const actions = document.createElement('div')
       const edit = document.createElement('button')
@@ -56,11 +57,11 @@ const onDomContentLoaded = () => {
 
       input.type = 'checkbox'
       input.checked = todo.done
-      span.classList.add('circle')
+      input.classList.add('circle')
       if (todo.category == 'personal') {
-        span.classList.add('personal')
+        input.classList.add('personal')
       } else {
-        span.classList.add('business')
+        input.classList.add('business')
       }
       content.classList.add('todo-content')
       actions.classList.add('actions')
@@ -72,7 +73,6 @@ const onDomContentLoaded = () => {
       deleteButton.innerHTML = 'Delete'
 
       label.appendChild(input)
-      label.appendChild(span)
       actions.appendChild(edit)
       actions.appendChild(deleteButton)
       todoItem.appendChild(label)
@@ -128,12 +128,14 @@ const onDomContentLoaded = () => {
   const businessButtonClicked = () => {
     radioButtonBusiness.classList.add('businessActive')
     radioButtonPersonal.classList.remove('personalActive')
+    localStorage.setItem('category', 'business')
   }
   radioButtonBusiness.addEventListener('click', businessButtonClicked)
 
   const personalButtonClicked = () => {
     radioButtonPersonal.classList.add('personalActive')
     radioButtonBusiness.classList.remove('businessActive')
+    localStorage.setItem('category', 'personal')
   }
   radioButtonPersonal.addEventListener('click', personalButtonClicked)
 }

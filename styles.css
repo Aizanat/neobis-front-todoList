@@ -113,7 +113,7 @@ body {
   width: 1.5rem;
   height: 1.5rem;
   display: inline-block;
-  border: 0.1rem solid rgb(50, 118, 235);
+  border: 0.2rem solid blue;
   border-radius: 50%;
   position: relative;
   left: 0.6rem;
@@ -127,7 +127,7 @@ body {
   height: 15px;
   border-radius: 50%;
   display: inline-block;
-  background: rgb(50, 118, 235);
+  background: blue;
   left: 13px;
   top: 25px;
 }
@@ -138,11 +138,11 @@ body {
 }
 
 .form__check-category-personal {
-  border: 0.1rem solid rgb(241, 4, 4);
+  border: 0.2rem solid red;
 }
 
 .form__check-category-personal::after {
-  background: rgb(241, 4, 4);
+  background: red;
 }
 
 .businessActive {
@@ -241,4 +241,31 @@ body {
 .todo-item.done .todo-content input {
   text-decoration: line-through;
   color: #585757;
+}
+
+input[type='checkbox'].personal {
+  -webkit-appearance: none; /* Убираем стандартный стиль */
+  -moz-appearance: none;
+  appearance: none;
+  width: 20px; /* Размер чекбокса */
+  height: 20px;
+  border-radius: 50%; /* Делаем его круглым */
+  border: 2px solid red; /* Цвет обводки */
+  background-color: white; /* Фоновый цвет */
+}
+input[type='checkbox'].personal:checked {
+  background-color: red; /* Изменяем цвет фона при выборе */
+}
+input[type='checkbox'].business {
+  -webkit-appearance: none; /* Убираем стандартный стиль */
+  -moz-appearance: none;
+  appearance: none;
+  width: 20px; /* Размер чекбокса */
+  height: 20px;
+  border-radius: 50%; /* Делаем его круглым */
+  border: 2px solid blue; /* Цвет обводки */
+  background-color: white; /* Фоновый цвет */
+}
+input[type='checkbox'].business:checked {
+  background-color: blue; /* Изменяем цвет фона при выборе */
 }
